@@ -6,21 +6,21 @@ using M800SMS.Configurations;
 
 namespace M800SMS
 {
-  public class SMSClass
+  public class Sms
     {
         private readonly string _domain;
         private readonly string _username;
         private readonly string _password;
 
 
-        public SMSClass(M800 setting)
+        public Sms(M800 setting)
         {
             _domain = setting.Domain;
             _username = setting.Username;
             _password = setting.Password;
         }
         
-        public string sendSMS(string countryCode, string mobileNo, string rawMsg)
+        public string SendSms(string countryCode, string mobileNo, string rawMsg)
         {
 
 
@@ -36,7 +36,7 @@ namespace M800SMS
 
             if (rawMsgTF == true)
             {
-                SMSMsg = ChangetoUnicode(rawMsg);
+                SMSMsg = ChangeToUnicode(rawMsg);
                 SMSMsg = SMSMsg.Replace("\\u", "");
                 dcs = "8";
                 if (rawMsgInt > 70)
@@ -67,7 +67,7 @@ namespace M800SMS
             return asciiBytesCount != unicodBytesCount;
         }
 
-        public static string ChangetoUnicode(string srcText)
+        public static string ChangeToUnicode(string srcText)
         {
             string dst = "";
             char[] src = srcText.ToCharArray();

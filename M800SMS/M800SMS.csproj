@@ -4,7 +4,7 @@
         
         <TargetFramework>netstandard2.0</TargetFramework>
         <PackageId>M800SMS</PackageId>
-        <Version>1.0.0</Version>
+        <Version>1.0.1</Version>
         <Authors>NoDreamWeb</Authors>
         <Company>NoDreamWeb</Company>
         <PackageDescription>M800 SMS Package</PackageDescription>
